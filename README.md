@@ -2,6 +2,8 @@
 Dockerfile for LAMP server
 
 ```
-  docker build -t suderman/apache-php7.3
-  docker push suderman/apache-php7.3
+make image    # build the image
+make shell    # run the container in a shell
+make push     # push the image to docker
 ```
+
