@@ -7,7 +7,7 @@ image:
 	docker build --tag $(IMAGE) .
 
 shell: 
-	docker run --rm -it $(IMAGE) /bin/bash
+	docker run --rm -it --cap-add SYS_ADMIN --security-opt apparmor:unconfined --device /dev/fuse $(IMAGE) /bin/bash
 
 push: 
 	docker push $(IMAGE)
